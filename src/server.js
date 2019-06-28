@@ -3,6 +3,7 @@ require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const path = require('path');
+const cors = require('cors');
 const configdb = require('./config/app');
 
 const app = express();
@@ -12,6 +13,9 @@ mongoose.connect(configdb.database_url, {
   useNewUrlParser: true,
   useCreateIndex: true,
 });
+
+/* Liberar cors para qualquer requisição */
+app.use(cors());
 
 /* Utilizar json nas requisições */
 app.use(express.json());
