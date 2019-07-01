@@ -30,7 +30,7 @@ class RoomController {
         return res.status(400).json({ error: 'Sala já existe' });
       }
 
-      const room = Room.create(req.body);
+      const room = await Room.create(req.body);
 
       return res.json(room);
     } catch (err) {
