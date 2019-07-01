@@ -48,6 +48,8 @@ class RoomController {
       if (req.body.title) room.title = req.body.title;
       if (req.body.description) room.description = req.body.description;
 
+      await room.save();
+
       return res.json(room);
     } catch (err) {
       return next(err);
