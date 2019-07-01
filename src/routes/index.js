@@ -16,6 +16,7 @@ routes.use(authMiddleware);
 
 routes.use('/users', require('./user'));
 routes.use('/files', require('./files'));
+routes.use('/rooms', require('./room'));
 
 // routes.use(Sentry.Handlers.errorHandler());
 
