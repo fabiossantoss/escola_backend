@@ -10,9 +10,6 @@ const Rooms = mongoose.Schema(
     description: {
       type: String,
     },
-    key: {
-      type: String,
-    },
   },
   {
     timestamps: true,
@@ -21,7 +18,7 @@ const Rooms = mongoose.Schema(
   },
 );
 
-Rooms.virtuals('key').get(function () {
+Rooms.virtual('key').get(function () {
   return this.id;
 });
 
