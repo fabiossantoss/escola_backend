@@ -10,6 +10,9 @@ const Rooms = mongoose.Schema(
     description: {
       type: String,
     },
+    key: {
+      type: String,
+    },
   },
   {
     timestamps: true,
