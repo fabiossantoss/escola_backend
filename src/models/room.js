@@ -18,4 +18,8 @@ const Rooms = mongoose.Schema(
   },
 );
 
+Rooms.virtuals('key').get(function () {
+  return this.id;
+});
+
 module.exports = mongoose.model('Room', Rooms);
