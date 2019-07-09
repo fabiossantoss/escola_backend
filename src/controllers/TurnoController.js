@@ -14,7 +14,7 @@ class TurnoController {
 
   async show(req, res, next) {
     try {
-      const turno = Turno.findById(req.params.id);
+      const turno = await Turno.findById(req.params.id);
 
       return res.json(turno);
     } catch (err) {

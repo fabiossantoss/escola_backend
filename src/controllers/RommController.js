@@ -14,7 +14,7 @@ class RoomController {
 
   async show(req, res, next) {
     try {
-      const room = Room.findById(req.params.id);
+      const room = await Room.findById(req.params.id);
 
       return res.json(room);
     } catch (err) {
