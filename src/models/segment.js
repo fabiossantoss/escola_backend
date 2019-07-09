@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const Turnos = mongoose.Schema(
+const Segment = mongoose.Schema(
   {
     title: {
       type: String,
@@ -12,4 +12,4 @@ const Turnos = mongoose.Schema(
   },
 );
 
-module.exports = mongoose.model('Turno', Turnos);
+module.exports = mongoose.model('Segment', Segment);

@@ -18,6 +18,7 @@ routes.use('/users', require('./user'));
 routes.use('/files', require('./files'));
 routes.use('/rooms', require('./room'));
 routes.use('/turnos', require('./turno'));
+routes.use('/segments', require('./segment'));
 
 // routes.use(Sentry.Handlers.errorHandler());
 
