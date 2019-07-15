@@ -44,9 +44,10 @@ User.methods = {
   },
 
   generateToken() {
-    return jwt.sign({ id: this.id }, secret, {
-      expiresIn: 86400,
-    });
+    return jwt.sign({ id: this.id }, secret);
+    // return jwt.sign({ id: this.id }, secret, {
+    //   expiresIn: 86400,
+    // });
   },
 };
 
